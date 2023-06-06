@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Domain", "TP.Domain\TP.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3B38244B-0A3A-4CC0-9732-9DC846188853}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP.Data", "TP.Data\TP.Data.csproj", "{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{5EAACD18-0E25-4409-A2DB-7038875B4DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EAACD18-0E25-4409-A2DB-7038875B4DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EAACD18-0E25-4409-A2DB-7038875B4DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5EAACD18-0E25-4409-A2DB-7038875B4DC6} = {376601CD-920A-4D10-B3DA-DC7E8574CB27}
+		{61A389DB-D4B5-4BC2-809D-CBA8898C0D0F} = {3B38244B-0A3A-4CC0-9732-9DC846188853}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1E66BE8-CD8E-44AC-BE59-F9B0BB69D7AE}

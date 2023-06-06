@@ -7,7 +7,7 @@ namespace TP.Domain.Interfaces.Data
         Task<IEnumerable<Student>> GetAll();
         Task<Student> GetById(int studentId);
         Task Add(Student student);
-        Task Remove(int studentId);
-        Task Update(int studentId);
+        Task RemoveById(int studentId);
+        Task Update(int studentId, Student newStudent);
     }
 }
