@@ -6,7 +6,7 @@ using TP.Domain.Settings;
 
 namespace TP.Data.Repositories
 {
-    internal class StudentRepository : IStudentRepository
+    public class StudentRepository : IStudentRepository
     {
         private readonly IMongoCollection<Student> _collection;
         private static string COLLECTION_NAME = "student";

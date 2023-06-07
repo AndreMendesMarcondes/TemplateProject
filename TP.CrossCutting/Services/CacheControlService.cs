@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using TP.Domain.Interfaces.Services;
 
-namespace TP.CrossCutting
+namespace TP.CrossCutting.Services
 {
     public class CacheControlService : ICacheControlService
     {
