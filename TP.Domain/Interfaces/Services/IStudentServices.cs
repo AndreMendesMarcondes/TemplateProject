@@ -8,6 +8,6 @@ namespace TP.Domain.Interfaces.Services
         Task<StudentResponseDTO> GetById(int studentId);
         Task Add(StudentRequestDTO studentRequestDTO);
         Task Remove(int studentId);
-        Task Update(int studentId);
+        Task Update(int studentId, StudentRequestDTO newStudent);
     }
 }
