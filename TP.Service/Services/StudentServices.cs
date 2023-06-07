@@ -37,6 +37,7 @@ namespace TP.Service.Services
             {
                 var student = _mapper.Map<Student>(studentRequestDTO);
                 await _studentRepository.Add(student);
+                _memoryCache.Remove("StudentResponseDTO");
             }
             catch (Exception ex)
             {
@@ -69,7 +70,7 @@ namespace TP.Service.Services
             }
         }
 
-        public async Task<StudentResponseDTO> GetById(int studentId)
+        public async Task<StudentResponseDTO> GetById(string studentId)
         {
             _logger.LogInformation("Service: buscando student");
 
@@ -86,13 +87,14 @@ namespace TP.Service.Services
             }
         }
 
-        public async Task Remove(int studentId)
+        public async Task Remove(string studentId)
         {
             _logger.LogInformation("Service: removendo student");
 
             try
             {
                 await _studentRepository.RemoveById(studentId);
+                _memoryCache.Remove("StudentResponseDTO");
             }
             catch (Exception ex)
             {
@@ -101,7 +103,7 @@ namespace TP.Service.Services
             }
         }
 
-        public async Task Update(int studentId, StudentRequestDTO newStudent)
+        public async Task Update(string studentId, StudentRequestDTO newStudent)
         {
             _logger.LogInformation("Service: atualizando student");
 
@@ -110,8 +112,8 @@ namespace TP.Service.Services
                 if (await GetById(studentId) != null)
                 {
                     var student = _mapper.Map<Student>(newStudent);
-                    await _studentRepository.Add(student);
                     await _studentRepository.Update(studentId, student);
+                    _memoryCache.Remove("StudentResponseDTO");
                 }
             }
             catch (Exception ex)

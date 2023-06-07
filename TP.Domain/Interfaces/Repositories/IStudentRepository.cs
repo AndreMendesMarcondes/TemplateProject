@@ -5,9 +5,9 @@ namespace TP.Domain.Interfaces.Data
     public interface IStudentRepository
     {
         Task<IEnumerable<Student>> GetAll();
-        Task<Student> GetById(int studentId);
+        Task<Student> GetById(string studentId);
         Task Add(Student student);
-        Task RemoveById(int studentId);
-        Task Update(int studentId, Student newStudent);
+        Task RemoveById(string studentId);
+        Task Update(string studentId, Student newStudent);
     }
 }

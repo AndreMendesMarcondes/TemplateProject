@@ -1,11 +1,21 @@
-﻿namespace TP.Domain.Domain
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace TP.Domain.Domain
 {
     public class Student
     {
-        public int IdStudent { get; private set; }
+        public Student()
+        {
+            CreationDate = DateTime.Now;
+        }
+
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; private set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; private set; }
         public DateTime LastUpdateDate { get; set; }
     }
 }

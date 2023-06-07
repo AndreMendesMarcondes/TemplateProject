@@ -26,6 +26,8 @@ builder.Services.AddScoped<ICacheControlService, CacheControlService>();
 builder.Services.Configure<MongoSettings>(
     builder.Configuration.GetSection("MongoSettings"));
 
+builder.Services.AddMemoryCache();
+
 var app = builder.Build();
 
 app.UseHealthChecks("/hc", new HealthCheckOptions

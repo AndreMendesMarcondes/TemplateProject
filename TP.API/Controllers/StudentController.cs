@@ -37,7 +37,7 @@ namespace TP.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(string id)
         {
             _logger.LogInformation($"Controller: Buscando student por id {id}");
 
@@ -71,7 +71,7 @@ namespace TP.API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int studentId, StudentRequestDTO studentRequest)
+        public async Task<IActionResult> Update(string studentId, StudentRequestDTO studentRequest)
         {
             _logger.LogInformation($"Controller: Atualizando student {JsonConvert.SerializeObject(studentRequest)}");
 
@@ -88,7 +88,7 @@ namespace TP.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int studentId)
+        public async Task<IActionResult> Delete(string studentId)
         {
             _logger.LogInformation($"Controller: Removendo student {studentId}");
 

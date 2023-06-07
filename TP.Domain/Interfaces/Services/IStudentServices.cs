@@ -5,9 +5,9 @@ namespace TP.Domain.Interfaces.Services
     public interface IStudentServices
     {
         Task<IEnumerable<StudentResponseDTO>> GetAll();
-        Task<StudentResponseDTO> GetById(int studentId);
+        Task<StudentResponseDTO> GetById(string studentId);
         Task Add(StudentRequestDTO studentRequestDTO);
-        Task Remove(int studentId);
-        Task Update(int studentId, StudentRequestDTO newStudent);
+        Task Remove(string studentId);
+        Task Update(string studentId, StudentRequestDTO newStudent);
     }
 }
